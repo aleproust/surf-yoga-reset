@@ -34,16 +34,16 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #1abc9c;
-  --bs-secondary: #2c3e50;
-  --bs-success: #198754;
+  --bs-primary: #E1D7CF;
+  --bs-secondary: #72959C;
+  --bs-success: #69CBDB;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 26, 188, 156;
-  --bs-secondary-rgb: 44, 62, 80;
+  --bs-primary-rgb: 225, 215, 207;
+  --bs-secondary-rgb: 114, 149, 156;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -667,6 +667,13 @@ progress {
     max-width: 1320px;
   }
 }
+.logo{
+  max-height: 2rem;
+  img{
+
+  }
+  max-width: 2rem;
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -675,6 +682,7 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+  padding: 1rem;
 }
 .row > * {
   flex-shrink: 0;
@@ -7173,7 +7181,7 @@ textarea.form-control-lg {
 }
 
 .border-primary {
-  --bs-border-opacity: 1;
+  --bs-border-opacity: .88;
   border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
 }
 
@@ -8035,12 +8043,12 @@ textarea.form-control-lg {
 
 /* rtl:end:remove */
 .text-primary {
-  --bs-text-opacity: 1;
+  --bs-text-opacity: .88
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-secondary {
-  --bs-text-opacity: 1;
+  --bs-text-opacity: .61;
   color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
 }
 
@@ -8131,7 +8139,7 @@ textarea.form-control-lg {
 }
 
 .bg-secondary {
-  --bs-bg-opacity: 1;
+  --bs-bg-opacity: .61;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
 }
 
@@ -10855,7 +10863,7 @@ html {
   width: 100%;
   max-width: 7rem;
   height: 0.25rem;
-  background-color: #2c3e50;
+  background-color: rgba(var(--bs-secondary-rgb), .61);
   border-radius: 1rem;
   border-color: #2c3e50;
 }
@@ -10935,11 +10943,11 @@ html {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #1abc9c;
+    background: #69CBDB;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #1abc9c;
+    background: #69CBDB;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -10966,9 +10974,17 @@ html {
   font-size: 1.5rem;
   color: #6c757d;
 }
-
+.contact-button{
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  font-size:2rem;
+  .text-center{
+    padding: 1rem;
+  }
+}
 .masthead {
-  background-image: url('../assets/img/woman-sunset.jpg');
+  background-image: url('../assets/logo.png');
   background-position: 0 0, 50%;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
@@ -10999,12 +11015,16 @@ html {
   }
 }
 .portfolio .portfolio-item {
-  cursor: pointer;
   position: relative;
   display: block;
   max-width: 25rem;
+  max-height: 25rem;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+.portofolio-text-title{
+  font-weight: 700;
+  font-size: 2rem;
 }
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
@@ -11014,9 +11034,7 @@ html {
   opacity: 0;
   background-color: rgba(26, 188, 156, 0.9);
 }
-.portfolio .portfolio-item .portfolio-item-caption:hover {
-  opacity: 1;
-}
+
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
 }
@@ -11084,7 +11102,9 @@ div.p{
   transition:max-height 0.5s;
   background-color: white;
   box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+  
 }
+
 div.p p {
   padding:2em;
 }
